@@ -51,3 +51,19 @@ Feature: automation practice landing page
 ...
 </pre>
 
+# Windows Users:
+
+1- Go to `src\java\testRunners\TestRunner.java` and change the path to comply with windows:
+
+<pre>
+...
+@CucumberOptions(
+        features = {"src\\test\\resources\\features"},
+        plugin = {"pretty", "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm", "html:target" +
+                "\\cucumber-reports\\report.html"},
+        glue = "stepDefinitions"
+)
+...
+</pre>
+
+
