@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import pages.LandingPage;
 
 public class LandingPageSteps {
@@ -15,5 +16,10 @@ public class LandingPageSteps {
     @Then("I check that landing page is shown correctly")
     public void iCheckThatLandingPageIsShownCorrectly() {
 
+    }
+
+    @When("I click on sign up")
+    public void iClickOnSignUp() {
+        page.clickOnLoginButton();
     }
 }
