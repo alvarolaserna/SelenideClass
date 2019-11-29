@@ -8,12 +8,15 @@ import static com.codeborne.selenide.Selectors.byCssSelector;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
+
 public class LandingPage {
     private Helpers helpers = new Helpers();
 
     // Elements
     private SelenideElement logo = $(byCssSelector("#header_logo img"));
     private SelenideElement searchInput = $(byCssSelector("#searchbox input.search_query"));
+    private SelenideElement loginButton = $(byCssSelector(".login"));
+
 
 
     // Methods
@@ -24,6 +27,10 @@ public class LandingPage {
     public void checkIAmInLandingPage() {
         logo.waitUntil(Condition.visible, 10000);
         searchInput.waitUntil(Condition.visible, 2000);
+    }
+
+    public void clickOnLoginButton() {
+        loginButton.click();
     }
 
 }

@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/features"},
+        features = {"src\\test\\resources\\features"},
         plugin = {"pretty", "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm", "html:target" +
-                "/cucumber-reports/report.html"},
+                "\\cucumber-reports\\report.html"},
         glue = "stepDefinitions"
 )
 public class TestRunner {
